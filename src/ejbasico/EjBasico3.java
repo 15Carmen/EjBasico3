@@ -5,26 +5,30 @@ import java.util.Scanner;
 public class EjBasico3 {
     public static void main(String[] args) {
 
-        //Creo el Scanner para leer por teclado
+        //Declaramos el Scanner para poder leer por consola
         Scanner sc = new Scanner (System.in);
 
-        //Le pedimos al usuario que introduzca el año actual
+        //Declaramos las variables actualYear, birthYear y age
+        int actualYear, birthYear, age;
+
+        /**
+         * Le pedimos al usuario que introduzca el año actual y su año de nacimiento
+         * y guardamos las respuestas en las variables correspondientes previamente
+         * declaradas
+         */
         System.out.println("Introduzca el año actual");
-
-        //Declaro la variable anyoActual donde se guarda el año introducido por consola y lo guardo
-        int anyoActual=sc.nextInt();
-
-        //Le pedimos al usuario su año de nacimiento
+        actualYear=sc.nextInt();
         System.out.println("Introduzca su año de nacimiento");
+        birthYear=sc.nextInt();
 
-        //Declaro la variable anyoActual donde se guarda el año introducido por consola y lo guardo
-        int anyoNacimiento=sc.nextInt();
+        /**
+         * Calculamos la edad del usuario restandole al año actual (actualYear),
+         * el año de nacimiento (birthYear)
+         */
+        age=actualYear-birthYear;
 
-        //Declaro la variable edad donde calculo la edad del usuario restandole a anyoActual anyoNacimiento
-        int edad=anyoActual-anyoNacimiento;
-
-        //Muestro edad por consola
-        System.out.println("Sabiendo esto tu edad es: "+edad);
+        //Mostramos la edad del usuario por consola
+        System.out.println("Sabiendo esto, tienes "+age+" años");
 
     }
 }
